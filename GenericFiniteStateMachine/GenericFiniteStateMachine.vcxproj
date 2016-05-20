@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FiniteStateMachine.h" />
-    <ClInclude Include="FiniteStateMachineImpl.h" />
+    <ClInclude Include="FiniteStateMachine.hpp" />
+    <ClInclude Include="FiniteStateMachineImpl.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

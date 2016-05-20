@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FiniteStateMachine.h">
+    <ClInclude Include="FiniteStateMachine.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="FiniteStateMachineImpl.h">
+    <ClInclude Include="FiniteStateMachineImpl.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

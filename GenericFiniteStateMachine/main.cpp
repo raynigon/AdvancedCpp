@@ -1,4 +1,4 @@
-#include "FiniteStateMachine.h"
+#include "FiniteStateMachine.hpp"
 #include <cassert>
 #include <iostream>
 
