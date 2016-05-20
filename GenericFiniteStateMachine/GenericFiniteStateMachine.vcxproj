@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FiniteStateMachine.h" />
+    <ClInclude Include="FiniteStateMachineImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B86C544C-18C3-4C9C-89AB-F5F4AA87F122}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
