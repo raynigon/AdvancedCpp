@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <unordered_map>
 #include <initializer_list>
 
@@ -13,7 +14,7 @@ protected:
 	using TransitionInitList = std::initializer_list<Transition<S, I>>;
 public:
 	FiniteStateMachine();
-	FiniteStateMachine(TransitionInitList);
+	FiniteStateMachine(S startState, TransitionInitList);
 	virtual ~FiniteStateMachine();
 	virtual bool operator() (const I&) final;
 	virtual S getCurrentState() const final;

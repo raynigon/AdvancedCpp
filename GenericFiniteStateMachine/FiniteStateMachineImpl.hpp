@@ -1,5 +1,5 @@
 #pragma once
-#include "FiniteStateMachine.h"
+#include "FiniteStateMachine.hpp"
 #include <algorithm>
 #include <functional>
 
@@ -8,7 +8,7 @@ template <typename S, typename I>
 FiniteStateMachine<S, I>::FiniteStateMachine() = default;
 
 template <typename S, typename I>
-FiniteStateMachine<S, I>::FiniteStateMachine(TransitionInitList initList)
+FiniteStateMachine<S, I>::FiniteStateMachine(S startState, TransitionInitList initList) : current(startState)
 {
 	auto fctAddTransition = std::bind(&FiniteStateMachine<S, I>::addTransition, this, std::placeholders::_1);
 	std::for_each(initList.begin(), initList.end(), fctAddTransition);

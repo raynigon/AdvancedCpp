@@ -18,7 +18,7 @@ std::ostream& operator<< (std::ostream&, const State&);
 
 int main()
 {
-	FiniteStateMachine<State, Input> fsm({ 
+	FiniteStateMachine<State, Input> fsm(State::LOCKED, {
 		{ State::LOCKED, Input::COIN, State::UNLOCKED }, 
 		{ State::UNLOCKED, Input::PUSH, State::LOCKED }
 	});
