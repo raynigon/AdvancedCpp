@@ -5,7 +5,7 @@
 template<typename It>
 concept bool Iterator() {
 	return requires(It& it) {
-		{++it}->It&;
+		//{++it}->It&;
 		{*it};
 	};
 }
@@ -37,4 +37,24 @@ concept bool RandomAccessIterator() {
 	};
 }
 
+template<typename T, typename U = T>
+concept bool Equality_comparable() {
+  return requires (T a, U b)
+  {
+    { a == b } -> bool;
+    { a != b } -> bool;
+  };
+}
+
+template<typename R>
+concept bool Range() {
+  return requires (R range)
+  {
+    { range.begin() }->Iterator;
+    { range.end() }->Iterator;
+  };
+}
+
+template<typename T> requires requires() { typename T::value_type; }
+  using ValueType = typename T::value_type;
 #endif

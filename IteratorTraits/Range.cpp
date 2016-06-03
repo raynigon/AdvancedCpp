@@ -2,9 +2,6 @@
 #include <vector>
 #include <string>
 
-template<typename T>
-using ValueType = typename T::value_type;
-
 bool contains(const Range& range, Equality_comparable<ValueType<Range>> value)
 {
 	for(auto tmp : range){
